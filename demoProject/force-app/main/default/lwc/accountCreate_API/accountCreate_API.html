@@ -1,0 +1,8 @@
+<template>
+   <lightning-card title="Account Creation" icon-name="standard_objects" >
+       <lightning-input name="name" label='Account Name' type="String" onchange={handleChange}></lightning-input>
+       <lightning-input name="phone" label='Phone' type="Phone" onchange={handleChange}></lightning-input>
+       <lightning-button name ="Add_Account" label="Add Account" onclick={handleAccountCreateButton}></lightning-button>
+
+   </lightning-card>
+</template>

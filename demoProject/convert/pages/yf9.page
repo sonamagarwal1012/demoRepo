@@ -1,0 +1,26 @@
+<apex:page controller="yf9">
+    <apex:form >
+        <apex:commandbutton value="objectfields" action="{!objectfields}"/>
+        <apex:commandbutton value="Show Table" action="{!showTable}"/>
+        <apex:pageblock >
+            <apex:pageblocksection >
+                <apex:selectlist multiselect="false" size="1" value="{!selectedObject}">
+                    <apex:selectoption itemlabel="--none--" itemvalue="--none--"/>
+                    <apex:selectoptions value="{!supportedObject}"/>
+                </apex:selectlist>
+            </apex:pageblocksection>
+            <apex:pageblocksection >
+                <apex:selectlist multiselect="true" size="5" value="{!selectedfields}">
+                    <apex:selectOption itemlabel="--none--" itemvalue="--none--"/>
+                    <apex:selectOptions value="{!supportedFields}"/>
+                </apex:selectlist>
+            </apex:pageblocksection>
+            <apex:pageblocktable value="{!objectList}" var="rec">
+                <apex:column value="{!rec.id}"/>
+                <apex:repeat value="{!selectedFields}" var="fields">
+                    <apex:column value="{!rec[fields]}"/>
+                </apex:repeat>
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

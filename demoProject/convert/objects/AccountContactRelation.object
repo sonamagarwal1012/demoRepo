@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>A_disconnect_notice_is_issued__c</fullName>
+        <externalId>false</externalId>
+        <label>A disconnect notice is issued</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Voice</fullName>
+                    <default>false</default>
+                    <label>Voice</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; Voice</fullName>
+                    <default>false</default>
+                    <label>Email &amp; Voice</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; SMS</fullName>
+                    <default>false</default>
+                    <label>Email &amp; SMS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EndDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Important_account_updates_Occur__c</fullName>
+        <externalId>false</externalId>
+        <label>Important account updates Occur</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Voice</fullName>
+                    <default>false</default>
+                    <label>Voice</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; Voice</fullName>
+                    <default>false</default>
+                    <label>Email &amp; Voice</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; SMS</fullName>
+                    <default>false</default>
+                    <label>Email &amp; SMS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Important_Payment_Updates__c</fullName>
+        <externalId>false</externalId>
+        <label>Important Payment Updates</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>Voice</fullName>
+                    <default>false</default>
+                    <label>Voice</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; SMS</fullName>
+                    <default>false</default>
+                    <label>Email &amp; SMS</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; Voice</fullName>
+                    <default>false</default>
+                    <label>Email &amp; Voice</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+    </fields>
+    <fields>
+        <fullName>IsDirect</fullName>
+    </fields>
+    <fields>
+        <fullName>Open_Service_Requests_Completed__c</fullName>
+        <externalId>false</externalId>
+        <label>Open Service Requests Completed</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Voice</fullName>
+                    <default>false</default>
+                    <label>Voice</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; Voice</fullName>
+                    <default>false</default>
+                    <label>Email &amp; Voice</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; SMS</fullName>
+                    <default>false</default>
+                    <label>Email &amp; SMS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Open_Service_Requests_Updated__c</fullName>
+        <externalId>false</externalId>
+        <label>Open Service Requests Updated</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Voice</fullName>
+                    <default>false</default>
+                    <label>Voice</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; Voice</fullName>
+                    <default>false</default>
+                    <label>Email &amp; Voice</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; SMS</fullName>
+                    <default>false</default>
+                    <label>Email &amp; SMS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Roles</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StartDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Your_payment_has_been_processed__c</fullName>
+        <externalId>false</externalId>
+        <label>Your payment has been processed</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                    <label>Phone</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; Phone</fullName>
+                    <default>false</default>
+                    <label>Email &amp; Phone</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; SMS</fullName>
+                    <default>false</default>
+                    <label>Email &amp; SMS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Your_payment_has_been_returned__c</fullName>
+        <externalId>false</externalId>
+        <label>Your payment has been returned</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Voice</fullName>
+                    <default>false</default>
+                    <label>Voice</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; Voice</fullName>
+                    <default>false</default>
+                    <label>Email &amp; Voice</label>
+                </value>
+                <value>
+                    <fullName>Email &amp; SMS</fullName>
+                    <default>false</default>
+                    <label>Email &amp; SMS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+</CustomObject>

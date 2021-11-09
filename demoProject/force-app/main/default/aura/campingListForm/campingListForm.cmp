@@ -1,0 +1,30 @@
+<aura:component >
+	 <form class="slds-form--stacked">  
+      
+          <lightning:input aura:id="CampingItemForm" label="ItemName"
+                             name="ItemName"
+                             value="{!v.newItem.Name}"
+                             required="true"/> 
+         <lightning:input type="number" aura:id="CampingItemForm" label="Quantity"
+                             name="Quantity"
+                          value="{!v.newItem.Quantity__c}"
+                          min="1"
+                          
+                          />
+            <lightning:input type="number" aura:id="CampingItemForm" label="Price"
+                             name="Price"
+                             formatter="currency"
+                              value="{!v.newItem.Price__c}"/>
+         
+        <lightning:input aura:id="CampingItemForm" type="Checkbox"                            
+                         label="Packed?"                           
+                         name="Packed"                         
+                         checked="{!v.newItem.Packed__c}"
+                          />
+         <lightning:button aura:id="CampingItemForm" label="Create Item" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.clickCreateItem}"/>
+        </form>
+     <aura:registerEvent name="addItem" type="c:addItemEvent"/>
+</aura:component>

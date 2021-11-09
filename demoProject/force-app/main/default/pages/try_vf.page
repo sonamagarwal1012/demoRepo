@@ -1,0 +1,23 @@
+<apex:page controller="try1">
+    <apex:form >
+    <apex:pageblock >
+        
+        <apex:pageBlockButtons >
+            <apex:commandbutton value="save" action="{!saveObjects}"/>
+        </apex:pageBlockButtons>
+            <apex:pageblocksection >
+                <apex:inputfield value="{!a1.name}"/>
+            </apex:pageblocksection>
+        <apex:pageblocktable value="{!cons}" var="c">
+            <apex:column >
+            <apex:inputfield value="{!c.email}"/>
+            </apex:column>
+            <apex:column >
+            <apex:inputfield value="{!c.lastname}"/></apex:column>
+            <apex:column >
+            <apex:inputfield value="{!c.phone}"/></apex:column>
+        </apex:pageblocktable>
+        
+    </apex:pageblock>
+        </apex:form>
+</apex:page>

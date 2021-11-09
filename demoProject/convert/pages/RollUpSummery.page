@@ -1,0 +1,13 @@
+<apex:page standardcontroller="account">
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageblocksection >
+            <apex:outputfield value="{!account.name}"/>
+            <apex:outputfield value="{!account.Industry}"/>
+            <apex:outputfield value="{!account.Phone}"/>
+            <apex:outputfield id="one" value="{!account.CountOfContacts__c}"/>
+            <apex:commandbutton value="Add contact" action="https://ap2.salesforce.com/003/e?retURL=%2F003%2Fo" />
+        </apex:pageblocksection>
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

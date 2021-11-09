@@ -1,0 +1,12 @@
+<apex:page >
+    <apex:form >
+    <script>
+    function show(){
+        var name=document.getElementbyid("one").value;
+        alert('hello'+name);
+        }
+        </script>
+        <input type="text" id="one" onchange="show()"/>
+        <apex:commandbutton value="click" onclick="show()"/>
+   </apex:form> 
+</apex:page>

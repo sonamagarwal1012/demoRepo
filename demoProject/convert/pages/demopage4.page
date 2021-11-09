@@ -1,0 +1,14 @@
+<apex:page standardController="Account" sidebar="false">
+<apex:pageblock title="Account details">
+    <apex:pageblocktable value="{!Account}" var="c" columnswidth="50,50,50">
+        <apex:column value="{!c.Name}"/>
+        <apex:column value="{!c.Type}"/>
+        <apex:column value="{!c.Industry}"/></apex:pageblocktable></apex:pageblock>
+
+<apex:pageblock title="related details">
+    <apex:pageblocktable value="{!Account.contacts}" var="c" columnswidth="50,50,50">
+        <apex:column value="{!c.Name}"/>
+        <apex.column value="{!c.FirstName}"/>
+        <apex:column value="{!c.LastName}"/>
+    </apex:pageblocktable>
+    </apex:pageblock></apex:page>

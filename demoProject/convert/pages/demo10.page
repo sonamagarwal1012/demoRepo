@@ -1,0 +1,10 @@
+<apex:page standardcontroller="Account">
+    <apex:PageBlock title="Account Details">
+    <apex:PageBlockSection title="Account Detail Section">
+        
+        </apex:PageBlockSection>
+    </apex:PageBlock>
+    <apex:detail relatedlist="false" />
+        <apex:relatedlist list="Contacts"/>
+        <apex:relatedlist list="Opportunities"/>
+</apex:page>

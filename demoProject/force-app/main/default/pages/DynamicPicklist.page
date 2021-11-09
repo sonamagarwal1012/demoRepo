@@ -1,0 +1,5 @@
+<apex:page controller="DynamicPicklist1">
+    <apex:selectoption value="{!Name}">
+        
+    </apex:selectoption>
+</apex:page>

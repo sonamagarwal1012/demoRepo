@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>gh</fullName>
+        <field>ValidationStatus</field>
+        <literalValue>Not Validated</literalValue>
+        <name>gh</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <knowledgePublishes>
+        <fullName>TestAction</fullName>
+        <action>PublishAsNew</action>
+        <label>TestAction</label>
+        <language>en_US</language>
+        <protected>false</protected>
+    </knowledgePublishes>
+    <knowledgePublishes>
+        <fullName>df</fullName>
+        <action>Publish</action>
+        <label>df</label>
+        <language>en_US</language>
+        <protected>false</protected>
+    </knowledgePublishes>
+    <rules>
+        <fullName>TestWorkflow</fullName>
+        <actions>
+            <name>TestAction</name>
+            <type>KnowledgePublish</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Test__kav.ValidationStatus</field>
+            <operation>equals</operation>
+            <value>Validated</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,14 @@
+<apex:page controller="Soql2">
+    <apex:form >
+        <apex:pageblock >
+            <apex:datalist value="{!acc}" var="a">
+                <apex:outputlabel >name :{!a.name}</apex:outputlabel> 
+                <apex:outputlabel >industry: {!a.industry}</apex:outputlabel>
+                <apex:datalist value="{!a.contacts}" var="b">
+                    <apex:outputlabel >last name: {!b.lastname}</apex:outputlabel> 
+                </apex:datalist>
+            </apex:datalist>
+        </apex:pageblock>
+        <apex:commandButton value="show" action="{!show}"/>
+    </apex:form>
+</apex:page>

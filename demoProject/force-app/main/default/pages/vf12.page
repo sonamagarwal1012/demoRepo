@@ -1,0 +1,4 @@
+<apex:page >
+    <apex:enhancedList height="300" type="account" rowsPerPage="10"/>/>
+    <apex:listViews type="account"/>
+</apex:page>

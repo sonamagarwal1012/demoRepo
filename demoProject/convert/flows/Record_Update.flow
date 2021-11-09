@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>Record Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Record Update</label>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_Account_Name</name>
+        <label>Update Account Name</label>
+        <locationX>257</locationX>
+        <locationY>199</locationY>
+        <connector>
+            <targetReference>Display_Updated_Account_Name</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>VarAccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Account_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <screens>
+        <name>Display_Updated_Account_Name</name>
+        <label>Display Updated Account Name</label>
+        <locationX>255</locationX>
+        <locationY>322</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>DisplayUpdatedAccountName</name>
+            <fieldText>updated account name=: {!Account_Name}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Update_Record</name>
+        <label>Update Record</label>
+        <locationX>256</locationX>
+        <locationY>86</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Update_Account_Name</targetReference>
+        </connector>
+        <fields>
+            <name>RecordIDSDisplay</name>
+            <fieldText>the record id is:= {!VarAccountId}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Account_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Account Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Update_Record</startElementReference>
+    <status>Draft</status>
+    <variables>
+        <name>VarAccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="messages" type="List" default="['you look nice today',
+                                                         'great whether we are having',
+                                                         'how are you?']"/>
+    <h2>List Items</h2>
+    <p><c:helloMessage message="{!v.messages[0]}"/></p>
+        <p><c:helloMessage message="{!v.messages[1]}"/></p>
+        <p><c:helloMessage message="{!v.messages[2]}"/></p>
+    
+    <h2>List Iteration</h2>
+    
+    <aura:iteration items="{!v.messages}" var="msg">
+     <p><c:helloMessage message="{!msg}"/></p>
+    </aura:iteration>
+    
+    <h2>Conditional Expressions and Global Value Providers</h2>
+    
+    <aura:if istrue="{!browser.IsIphone}">
+        <c:helloMessage message="{!v.messages[0]}"/>
+        <aura:set attribute="else">
+            <c:helloMessage message="{!v.messages[1]}"/>
+            
+        </aura:set>
+    </aura:if>
+	
+</aura:component>

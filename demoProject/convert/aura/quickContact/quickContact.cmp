@@ -1,0 +1,18 @@
+<aura:component controller="QuickContactController" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    <aura:attribute name="account" type="account"/>
+    <aura:attribute name="newContact" type="Contact" default="{'sobjectType':'Contact'}"/>
+    <aura:handler name="init" Label="inIt" value="{!this}" action="{!c.doInit}"/>
+    <lightning:input aura:id="CaontactField" name="FirstName" Label="First Name" 
+                     value="{!v.newContact.firstname}" required="true"/>
+    <lightning:input aura:id="CaontactField" name="LastName" Label="Last Name" 
+                     value="{!v.newContact.lastname}" required="true"/>
+    <lightning:input aura:id="CaontactField" name="Title" Label="Title" 
+                     value="{!v.newContact.title}"/>
+    <lightning:input aura:id="CaontactField" name="Phone" Label="Phone" pattern="^(1?(-?\d{3})-?)?(\d{3})(-?\d{4})$"
+messageWhenPatternMismatch="The phone number must contain 7, 10,or 11 digits.Hyphens are optional."
+                     value="{!v.newContact.Phone}" required="true"/>
+    <lightning:input aura:id="CaontactField" name="Email" Label="Email" 
+                     value="{!v.newContact.email}"/>
+    <lightning:button Label="Cancel" OnClick="{!c.HandleCancel}"/>  
+    <lightning:button Label="Save" OnClick="{!c.HandleSavecontact}"/>
+</aura:component>

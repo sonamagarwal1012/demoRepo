@@ -1,0 +1,9 @@
+<apex:page controller="listExample">
+    <apex:form >
+        <apex:pageblock title="list">
+            <apex:pageblocktable value="{!result}" var="a">
+                <apex:column headervalue="name" value="{!a}"/>
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

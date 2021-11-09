@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>sonamagarwal1012@gmail.com</contactEmail>
+    <label>DreamHouse_demo</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <consumerKey>3MVG9ZL0ppGP5UrDHxH2nD4gF3dErMs1rVIcyTrpkUH1IOv0WLiV2gtv7ZNJzBd_b.jNAsCluPgPpQ4zqRhs0</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+    <profileName>Standard User</profileName>
+    <profileName>Inside Sales User</profileName>
+    <profileName>Field Sales User</profileName>
+    <profileName>Sales Executive User</profileName>
+</ConnectedApp>

@@ -1,0 +1,19 @@
+<apex:page standardcontroller="account">
+    <apex:form >
+        <apex:inputtext value="{!account.industry}"/>
+        <apex:inputField value="{!account.industry}"/>
+        <apex:pageblock title="my Block">
+            <apex:inputtext value="{!account.industry}"/>
+        <apex:inputField value="{!account.industry}"/>
+        
+        <apex:pageblocksection title="My Section">
+            <apex:inputtext value="{!account.industry}"/>
+        <apex:inputField value="{!account.industry}"/>
+            <apex:pageBlockSectionItem >
+                <apex:inputtext value="{!account.industry}"/>
+        <apex:inputField value="{!account.industry}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageblocksection>
+            </apex:pageblock>
+    </apex:form>
+</apex:page>

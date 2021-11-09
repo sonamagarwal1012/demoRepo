@@ -1,0 +1,10 @@
+<apex:page controller="picklist">
+    <apex:form >
+        <apex:selectlist size="1" value="{!myVal}">
+            <apex:selectoptions value="{!options}" >
+                <apex:actionsupport event="onchange" rerender="one"/>
+            </apex:selectoptions>
+        </apex:selectlist>
+        <apex:outputlabel id="one">you have entered {!myVal}</apex:outputlabel>
+    </apex:form>
+</apex:page>

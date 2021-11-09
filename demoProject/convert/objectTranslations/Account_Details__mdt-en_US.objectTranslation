@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Details</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Details</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <fields>
+        <label></label>
+        <name>API_Name__c</name>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Default_Email__c</name>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Parent_Child__c</name>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Section_Label__c</name>
+    </fields>
+    <fields>
+        <label></label>
+        <name>Section_Type__c</name>
+    </fields>
+</CustomObjectTranslation>

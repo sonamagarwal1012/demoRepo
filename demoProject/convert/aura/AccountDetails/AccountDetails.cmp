@@ -1,0 +1,129 @@
+<aura:component controller="AccountDetails" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    <aura:attribute name="optionDays" type="String[]"/>
+    <aura:attribute name="acrWrapper" type="AccountDetails.ParentWrapper"/>
+    <aura:attribute name="isDisabled" type="Boolean" default="true"/>
+    <aura:attribute name="buttonSelected" type="Boolean" default="False"/>
+    <aura:attribute name="AccountUpdates" type="Boolean" default="False"/>
+    <aura:attribute name="BillingUpdates" type="Boolean" default="False"/>
+    <aura:attribute name="BillingPayments" type="Boolean" default="False"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="toggleSpinner" type="boolean" default="false"/> 
+     <aura:attribute name="isSuccessful" type="boolean" default="false"/>
+    <aura:if isTrue="{!v.toggleSpinner}">
+        <div class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.isSuccessful}">
+        <br/>
+        <br/>
+        <div class="slds-text-heading--small slds-text-longform">
+            <p>Record has been updated successfully created.</p>
+        </div>
+    </aura:if>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:if isTrue="{!v.buttonSelected}">
+     <lightning:button variant="brand" label="Cancel" onclick="{! c.handleCancelClick }" />
+        <aura:set attribute="else">
+    <lightning:button variant="brand" label="Edit All" onclick="{! c.handleEditClick }" />
+        </aura:set>
+    </aura:if>
+    <div class="slds-grid">
+        Account Updates<br/>
+        We'll alert you when:
+        <lightning:input name="toggle" type="toggle" messageToggleActive="ON" messageToggleInactive="OFF" disabled="{!v.isDisabled}" checked="{!v.AccountUpdates}"/>
+    </div>
+    <form class="slds-form">
+        
+        <div class="slds-form-element">
+            <div class="slds-grid">
+                <table>
+                    <aura:iteration items="{!v.acrWrapper.lstAccountChild}" var="param" indexVar="index">
+                        <tr id ="{!index}">
+                            <td>{!param.fieldName}</td>
+                            <td>
+                                <lightning:buttonIcon variant="bare" iconName="utility:email" size="small" />
+                                EMAIL
+                                <lightning:input name="toggle" type="toggle" checked="{!param.email}" disabled="{!v.isDisabled}"/>
+                            </td>
+                            <td>
+                                <lightning:buttonIcon variant="bare" iconName="utility:phone_portrait" size="small" />
+                                SMS
+                                <lightning:input data-row-index="{!index}"  name="toggle" type="toggle" checked="{!param.sms}" disabled="{!v.isDisabled}"/>
+                            </td>
+                            <td>
+                                <lightning:buttonIcon variant="bare" iconName="utility:call" size="small" />
+                                VOICE
+                                <lightning:input data-row-index="{!index}" name="toggle" type="toggle" checked="{!param.voice}" disabled="{!v.isDisabled}"/>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </table> 
+            </div>
+        </div>
+
+        <div class="slds-form-element">
+            <div class="slds-grid">
+                <a>Account Update Notifications Terms and Conditions</a>
+            </div><br/>
+            <div class="slds-grid">
+                Billing and Payments<br/>
+                We'll alert you when:
+                <lightning:input name="toggle" type="toggle" messageToggleActive="ON" messageToggleInactive="OFF" disabled="{!v.isDisabled}" onclick="{!v.onClickOfSMSAndVoice}" checked="{!v.BillingUpdates}"/>
+            </div><br/>
+            <div class="slds-grid">
+                <table>
+                    <aura:iteration items="{!v.acrWrapper.lstBillingChild}" var="param" indexVar="index">
+                        <tr>
+                            <td>{!param.fieldName}</td>
+                            <td>
+                                <lightning:buttonIcon variant="bare" iconName="utility:email" size="small" />
+                                EMAIL
+                                <lightning:input name="{!index}" type="toggle" checked="{!param.email}" disabled="true"/>
+                            </td>
+                            <td>
+                                <lightning:buttonIcon variant="bare" iconName="utility:phone_portrait" size="small" />
+                                SMS
+                                <lightning:input name="{!index+'#sms'}" aura:id="toggleSMSAndVoice" type="toggle" checked="{!param.sms}" disabled="{!v.isDisabled}" onchange="{!c.onClickOfSMSAndVoice}"  value="{!param.fieldName +'#SMS'}"/>
+                            </td>
+                            <td>
+                                <lightning:buttonIcon variant="bare" iconName="utility:call" size="small" />
+                                VOICE
+                                <lightning:input name="{!index+'#voice'}" aura:id="toggleSMSAndVoice" type="toggle" checked="{!param.voice}" disabled="{!v.isDisabled}" onchange="{!c.onClickOfSMSAndVoice}" value="{!param.fieldName + '#Voice'}" updateOn="onChange"/>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </table>  
+            </div>
+        </div>
+    </form>
+    <div class="slds-grid">
+        <a>Billing and Payments Notifications Terms and Conditions</a>
+    </div><br/>
+     <aura:if isTrue="{!v.isOpen}">
+          <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+               <div class="slds-modal__container">
+                   <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p style="color:red;"><b>You can only select either SMS or Voice.
+                            </b>
+                        </p>
+                    </div>
+                   <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                   </footer>
+              </div>
+         </section>
+    </aura:if>
+     <aura:if isTrue="{!v.buttonSelected}">
+    <footer class="slds-modal__footer">
+            <lightning:button variant="brand" label="Save" onclick="{! c.saveAccountDetails }" />
+    </footer>
+    </aura:if>
+</aura:component>

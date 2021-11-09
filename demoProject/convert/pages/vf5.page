@@ -1,0 +1,17 @@
+<apex:page standardcontroller="account" recordsetvar="items">
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblocktable value="{!items}" var="a" rows="5">
+                <apex:column >
+                    <apex:facet name="header">action</apex:facet>
+                    <apex:commandlink value="edit" action="/{!a.id}/e?retURL={a.id}" />
+                    <apex:commandLink value="delete" action="{!URLFOR($action.account.delete,a.id)}"/>
+                    <apex:facet name="footer">My Fav Footer</apex:facet>
+                </apex:column>
+                <apex:column headervalue="names">
+                    {!a.name}
+                </apex:column>
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

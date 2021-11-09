@@ -1,0 +1,14 @@
+<apex:page controller="mapExampleController">
+    <apex:outputpanel id="one" layout="block">
+        <apex:form >
+            <apex:repeat value="{!m1}" var="m">
+              
+                <apex:outputtext value="{!m}"/>
+                <apex:inputtext value="{!m1[m]}"/>
+            </apex:repeat>
+       
+            
+        <apex:commandButton action="{!doCalculate}" value="calculate" rerender="one"/>
+         </apex:form>
+    </apex:outputpanel>
+</apex:page>

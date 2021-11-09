@@ -1,0 +1,13 @@
+<apex:page controller="mapExample">
+    <apex:form >
+        <apex:pageblock title="Map example">
+            <apex:selectlist size="1" value="{!statename}">
+                <apex:selectoptions value="{!state}"/>
+                <apex:actionsupport event="onchange" action="{!show}" rerender="one"/>
+            </apex:selectlist>
+            <apex:selectlist size="1" id="one">
+            <apex:selectoptions value="{!city}"/>
+            </apex:selectlist>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

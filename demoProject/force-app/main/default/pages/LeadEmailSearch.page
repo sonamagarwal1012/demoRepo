@@ -1,0 +1,15 @@
+<apex:page controller="LeadSearch">
+    <apex:form >
+    <apex:pageblock >
+        <apex:outputlabel >Lead Email</apex:outputlabel>
+        <apex:inputText value="{!leadEmail}"/>
+         <apex:commandbutton action="{!Go}" value="Go" rerender="one"/>
+        <apex:pageblocktable id="one" value="{!listLead}" var="lead">
+            
+            <apex:column value="{!lead.id}"/>
+            <apex:column value="{!lead.name}"/>
+           
+        </apex:pageblocktable>
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

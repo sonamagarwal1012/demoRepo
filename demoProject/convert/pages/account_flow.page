@@ -1,0 +1,5 @@
+<apex:page >
+
+   <flow:interview name="account" />
+
+</apex:page>

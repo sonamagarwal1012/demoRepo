@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "convert",
+      "default": true
+    }
+  ],
+  "name": "demoProject",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "52.0"
+}

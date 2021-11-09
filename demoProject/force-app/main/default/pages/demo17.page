@@ -1,0 +1,14 @@
+<apex:page standardController="opportunity" tabstyle="opportunity" recordSetVar="opportunity">
+    <apex:form >
+    <apex:pageblock title="list view for opportunity">
+        <apex:selectlist value="{!filterId}" size="1">
+            <apex:actionsupport event="onchange" rerender="list"/>
+            <apex:selectoptions value="{!listviewoptions}"/>
+            
+        </apex:selectlist>
+    </apex:pageblock>
+        <apex:datalist id="list" value="{!opportunity}" var="O">
+            {!O.name}
+        </apex:datalist>
+        </apex:form>
+</apex:page>

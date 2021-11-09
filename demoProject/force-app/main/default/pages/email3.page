@@ -1,0 +1,8 @@
+<apex:page controller="email3">
+    <apex:form >
+        <apex:pageblock >
+        <apex:inputtext value="{!myname}"/>
+        <apex:commandButton action="{!show}" value="senf pDF attachment"/>
+            </apex:pageblock>
+    </apex:form>
+</apex:page>

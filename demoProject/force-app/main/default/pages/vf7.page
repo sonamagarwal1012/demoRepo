@@ -1,0 +1,14 @@
+<apex:page standardcontroller="account">
+    <style>
+        .activeTab{background-color:black;color:red}
+        .inactivetab{background-color:green;color:blue}
+    </style>
+    <apex:tabpanel selectedtab="name2" tabclass="activetab" inactivetabclass="inactiveTab">
+        <apex:tab label="details of account" name="name1">
+            <apex:detail relatedlist="false"/>
+        </apex:tab>
+        <apex:tab label="Contacts" name="name2">
+            <apex:relatedlist list="contacts"/>
+        </apex:tab>
+    </apex:tabpanel>
+</apex:page>

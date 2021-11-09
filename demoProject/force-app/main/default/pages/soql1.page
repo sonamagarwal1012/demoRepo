@@ -1,0 +1,13 @@
+<apex:page controller="Soql1">
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblocktable value="{!con}" var="c">
+                <apex:column headervalue="contact name" value="{!c.name}"/>
+                <apex:column headervalue="account name" value="{!c.account.name}"/>
+                <apex:column headervalue="industry" value="{!c.account.industry}"/>
+            </apex:pageblocktable>
+        </apex:pageblock>
+        <apex:commandbutton action="{!show}" value="show"
+                            />
+    </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page standardcontroller="account" contenttype="application/vnd.ms-excel">
+   <apex:pageblock >
+       <apex:pageblocktable value="{!account}" var="a">
+           <apex:column value="{!a.name}"/>
+       </apex:pageblocktable>
+    </apex:pageblock>
+</apex:page>

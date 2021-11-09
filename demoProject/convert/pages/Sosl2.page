@@ -1,0 +1,23 @@
+<apex:page controller="sosl1">
+    <apex:form >
+        <apex:pageblock title="account details">
+            <apex:pageblocktable value="{!acclist}" var="a">
+                <apex:column headervalue="name" value="{!a.name}"/>
+                <apex:column headervalue="type" value="{!a.type}"/>
+                </apex:pageblocktable>
+            <apex:pageblocktable value="{!conlist}" var="b">
+                <apex:column headervalue="first name" value="{!b.name}"/>
+                <apex:column headervalue="email" value="{!b.email}"/>
+                </apex:pageblocktable>
+            <apex:pageblocktable value="{!opplist}" var="o">
+                <apex:column headervalue="opportunity name" value="{!o.name}"/>
+                <apex:column headervalue="stage name" value="{!o.stagename}"/>
+                </apex:pageblocktable>
+            <apex:pageblocktable value="{!leadlist}" var="l">
+                <apex:column headervalue="lead name" value="{!l.name}"/>
+                <apex:column headervalue="company" value="{!l.company}"/>
+                </apex:pageblocktable>
+        </apex:pageblock>
+        <apex:commandbutton action="{!show}" value="show"/>
+    </apex:form>
+</apex:page>

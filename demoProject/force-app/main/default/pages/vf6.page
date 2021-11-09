@@ -1,0 +1,8 @@
+<apex:page standardcontroller="account" recordsetvar="items">
+    <apex:repeat value="{!items}" var="a">
+    <apex:outputtext value="{!a.name}"/>
+    </apex:repeat>
+    <apex:datalist value="{!items}" var="b" type="square">
+        <apex:outputtext value="{!b.name}"/>
+    </apex:datalist>
+</apex:page>

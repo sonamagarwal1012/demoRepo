@@ -1,0 +1,12 @@
+<apex:page controller="cc2">
+    <apex:form >
+        <apex:pageblock >
+            <apex:inputfield value="{!acc.name}"/>
+            <apex:inputfield value="{!acc.Industry}"/>
+            <apex:inputfield value="{!acc.Phone}"/>
+            <apex:pageblockbuttons >
+                <apex:commandButton action="{!save}" value="update"/>
+            </apex:pageblockbuttons> 
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

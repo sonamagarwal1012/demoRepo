@@ -1,0 +1,24 @@
+<apex:page standardcontroller="opportunity">
+    <apex:form >
+        <apex:outputlabel >Enter Opportunity Information</apex:outputlabel>
+        <apex:pageblock title="opportunity Info">
+            <apex:pageBlockSection >
+                <apex:inputfield value="{!opportunity.name}"/>
+                <apex:pageBlockSectionItem >
+                    <apex:actionregion >
+                        <apex:inputfield value="{!opportunity.stagename}">
+                            <apex:actionsupport event="onchange" rerender="one"/>
+                        </apex:inputfield>
+                    </apex:actionregion>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:outputpanel id="one">
+            <apex:pageblocksection rendered="{!opportunity.stagename=='Prospecting'}">
+                <apex:inputField value="{!opportunity.closedate}"/>
+                
+            </apex:pageblocksection>
+                </apex:outputpanel>
+        </apex:pageblock>
+    </apex:form>
+    
+</apex:page>

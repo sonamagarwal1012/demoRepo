@@ -1,0 +1,53 @@
+<apex:page sidebar="false" tabStyle="Lead" standardController="account">
+    <apex:sectionHeader description="MyPage" title="home" subtitle="Home" help="/apex/demopage1"/>
+    <H1>
+        This Is My Demo Page
+    </H1>
+    {!$CurrentPage.Parameters.Name}<br/>
+    {!$User.FirstName} {!$User.LastName}<br/>
+    {!$Profile.Name}<br/>
+    {!$Organization.Name}<br/>
+    <apex:pageBlock title="account page block">this is my page block<br/>
+        
+        <apex:outputLabel >Name</apex:outputLabel><br/>
+        <apex:outputlabel value="Password"/><br/>
+        <apex:outputtext value="{!Account.Name}"/><br/>
+        <apex:outputText >OutputText1</apex:outputText><br/>
+        <apex:outputField value="{!account.name}"/><br/>
+        
+    </apex:pageBlock>
+    <apex:form >
+    <apex:pageblock title="Account Info">
+        Type<apex:inputField value="{!account.Type}"/><br/>
+        Hidden field<apex:inputHidden /><br/>
+        Password<apex:inputSecret /><br/>
+        Type<apex:InputText value="{!account.type}"/><br/>
+        Address<apex:inputTextArea cols="30"/><br/>
+          </apex:pageblock>
+        <apex:pageBlock title="Account2">
+        <apex:pageBlockSection collapsible="true" columns="2" title="Sub Account">
+            
+            <apex:inputField value="{!account.Type}"/><br/>
+        Hidden field<apex:inputHidden /><br/>
+        Password<apex:inputSecret /><br/>
+            <apex:inputText value="{!account.type}"/><br/>
+            address<apex:inputTextArea cols="30"/>
+              </apex:pageBlockSection></apex:pageBlock>
+        <apex:pageBlock title="account3">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="save" action="{!save}"/>
+                <apex:commandButton value="edit" action="{!edit}"/>
+                <apex:commandButton value="cancel" action="http://www.google.com"/>
+            </apex:pageBlockButtons>
+            <apex:selectCheckboxes legendText="choice1" legendInvisible="false" borderVisible="true">
+            <apex:selectOption itemLabel="jan" itemValue="one"></apex:selectOption>
+            <apex:selectOption itemLabel="feb" itemValue="two"></apex:selectOption></apex:selectCheckboxes>
+            <apex:selectRadio >
+            <apex:selectOption itemLabel="jan" itemValue="one"></apex:selectOption>
+                <apex:selectOption itemLabel="feb" itemValue="two"></apex:selectOption></apex:selectRadio>
+            <apex:selectList size="1">
+            <apex:selectOption itemLabel="jan" itemValue="one"></apex:selectOption>
+            <apex:selectOption itemLabel="feb" itemValue="two"></apex:selectOption></apex:selectList>
+        </apex:pageBlock>
+    </apex:form>
+    </apex:page>

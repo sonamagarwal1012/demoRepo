@@ -1,0 +1,7 @@
+<apex:page controller="CE1">
+    <apex:pageblock >
+        <apex:pageblocktable value="{!opp}" var="O">
+            <apex:column value="{!O.name}"/>
+        </apex:pageblocktable>
+    </apex:pageblock>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="SelectOptions">
+    <apex:form ><apex:selectCheckboxes >
+        <apex:selectoptions value="{!items}"/>
+        </apex:selectCheckboxes>
+        <apex:commandButton action="{!test}" rerender="out"/>
+</apex:form>
+<apex:outputpanel id="out">
+    <apex:outputpanel >
+        <p>
+             you have selected
+        </p>
+        <apex:datalist value="{!Items}" var="c">{!c}</apex:datalist>
+    </apex:outputpanel>
+        </apex:outputpanel>    
+    
+</apex:page>

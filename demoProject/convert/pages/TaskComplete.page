@@ -1,0 +1,6 @@
+<apex:page standardcontroller="Task" extensions="TaskCompleteButton">
+    
+    <apex:form >
+       <apex:commandButton action="{!complete}" value="complete"/>
+    </apex:form>
+</apex:page>

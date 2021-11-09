@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Library Management --></label>
+        <name>Library_Management</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Training Detail --></label>
+        <name>Training_Detail</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- vb --></label>
+        <name>vb</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- Created_by_Me --></label>
+        <name>Dashboard_Pal__Created_by_Me</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Modal_Acknowledge_Button --></label>
+        <name>Dashboard_Pal__Modal_Acknowledge_Button</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Modal_Feature1 --></label>
+        <name>Dashboard_Pal__Modal_Feature1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Modal_Feature2 --></label>
+        <name>Dashboard_Pal__Modal_Feature2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Modal_Feature3 --></label>
+        <name>Dashboard_Pal__Modal_Feature3</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Modal_Feature4 --></label>
+        <name>Dashboard_Pal__Modal_Feature4</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Modal_Heading --></label>
+        <name>Dashboard_Pal__Modal_Heading</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No_Dashboards_Found --></label>
+        <name>Dashboard_Pal__No_Dashboards_Found</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No_Folder_Selected --></label>
+        <name>Dashboard_Pal__No_Folder_Selected</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- No Query Results --></label>
+        <name>Dashboard_Pal__No_Query_Results</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Private_Dashboards --></label>
+        <name>Dashboard_Pal__Private_Dashboards</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select_Dashboard_Label --></label>
+        <name>Dashboard_Pal__Select_Dashboard_Label</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select_Dashboard_Value --></label>
+        <name>Dashboard_Pal__Select_Dashboard_Value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select_Folder_Label --></label>
+        <name>Dashboard_Pal__Select_Folder_Label</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Select_Folder_Value --></label>
+        <name>Dashboard_Pal__Select_Folder_Value</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Title --></label>
+        <name>Dashboard_Pal__Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tooltip_Text --></label>
+        <name>Dashboard_Pal__Tooltip_Text</name>
+    </customLabels>
+    <customLabels>
+        <label>Interview</label>
+        <name>Test</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- Account Create --></label>
+        <name>Account_Create</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Account Create API --></label>
+        <name>Account_Create_API</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- App Filtered View --></label>
+        <name>App_Filtered_View</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Implementation --></label>
+        <name>Implementation</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- LWClearning --></label>
+        <name>LWClearning</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- MyData --></label>
+        <name>MyData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Test12 --></label>
+        <name>Test12</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Words --></label>
+        <name>Words</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- account2 --></label>
+        <name>account2</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Account_Name</name>
+                </fields>
+                <fields>
+                    <name>Phone_Number</name>
+                </fields>
+                <name>New_Account</name>
+            </screens>
+        </flows>
+        <fullName>Account</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Contact_address_change</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <name>Closed_Lost</name>
+            </choices>
+            <choices>
+                <name>Closed_Won</name>
+            </choices>
+            <choices>
+                <name>Prospecting</name>
+            </choices>
+            <screens>
+                <fields>
+                    <name>Company_Name</name>
+                </fields>
+                <fields>
+                    <name>First_Name</name>
+                </fields>
+                <fields>
+                    <name>Last_Name</name>
+                </fields>
+                <fields>
+                    <name>Opportunity_Amount</name>
+                </fields>
+                <fields>
+                    <name>Opportunity_Stage</name>
+                </fields>
+                <name>implement_business_process</name>
+            </screens>
+        </flows>
+        <fullName>New_Customer_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Onboarding</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>DisplayUpdatedAccountName</name>
+                </fields>
+                <name>Display_Updated_Account_Name</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>Account_Name</name>
+                </fields>
+                <fields>
+                    <name>RecordIDSDisplay</name>
+                </fields>
+                <name>Update_Record</name>
+            </screens>
+        </flows>
+        <fullName>Record_Update</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Test</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Ch</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Child_Records</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>abc</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>df</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>Message</name>
+                </fields>
+                <name>Display</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>Account_Name</name>
+                </fields>
+                <name>Quick_Account</name>
+            </screens>
+        </flows>
+        <fullName>myflow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>sdf</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>sonam</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>update_owner_of_position</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>xyz</fullName>
+    </flowDefinitions>
+    <reportTypes>
+        <description><!-- Accounts with Entitlements with Contacts --></description>
+        <label><!-- Accounts with Entitlements with Contacts --></label>
+        <name>Accounts_with_Entitlements_with_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Entitlements --></label>
+            <name>Entitlements</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Administrative Reports --></description>
+        <label><!-- Administrative Reports --></label>
+        <name>Administrative_Reports</name>
+        <sections>
+            <label><!-- Identity Verification History --></label>
+            <name>Identity Verification History</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Omni-Channel Reports --></description>
+        <label><!-- Omni-Channel Reports --></label>
+        <name>Omni_Channel_Reports</name>
+        <sections>
+            <label><!-- Agent Work --></label>
+            <name>Agent Work</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Service Contracts with Contract Line Items --></description>
+        <label><!-- Service Contracts with Contract Line Items --></label>
+        <name>Service_Contracts_with_Contract_Line_Items</name>
+        <sections>
+            <label><!-- Contract Line Items --></label>
+            <name>Contract Line Items</name>
+        </sections>
+        <sections>
+            <label><!-- Service Contracts --></label>
+            <name>Service Contracts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Service Contracts with Entitlements --></description>
+        <label><!-- Service Contracts with Entitlements --></label>
+        <name>Service_Contracts_with_Entitlements</name>
+        <sections>
+            <label><!-- Entitlements --></label>
+            <name>Entitlements</name>
+        </sections>
+        <sections>
+            <label><!-- Service Contracts --></label>
+            <name>Service Contracts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Training Courses with Training Classes with Training Attendees --></description>
+        <label><!-- Training Courses with Training Classes with Training Attendees --></label>
+        <name>Training_Courses_with_Training_Classes_with_Training_Attendees</name>
+        <sections>
+            <label><!-- Training Attendees --></label>
+            <name>Training Attendees</name>
+        </sections>
+        <sections>
+            <label><!-- Training Classes --></label>
+            <name>Training Classes</name>
+        </sections>
+        <sections>
+            <label><!-- Training Courses --></label>
+            <name>Training Courses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- job application with reviews --></description>
+        <label><!-- job application with reviews --></label>
+        <name>job_application_with_reviews</name>
+        <sections>
+            <label><!-- Job Applications --></label>
+            <name>Job Applications</name>
+        </sections>
+        <sections>
+            <label><!-- Reviews --></label>
+            <name>Reviews</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Screen Flows --></description>
+        <label><!-- Screen Flows --></label>
+        <name>screen_flows_prebuilt_crt</name>
+        <sections>
+            <label><!-- Flow Interview Log Entries --></label>
+            <name>Flow Interview Log Entries</name>
+        </sections>
+        <sections>
+            <label><!-- Flow Interview Logs --></label>
+            <name>Flow Interview Logs</name>
+        </sections>
+    </reportTypes>
+</Translations>

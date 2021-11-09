@@ -1,0 +1,13 @@
+<apex:page controller="AddUpdateAccount" tabstyle="account">
+    <apex:form >
+        <apex:pageblock >
+            <apex:inputfield value="{!account.name}"/>            
+            <apex:inputfield value="{!account.phone}"/>
+
+                <apex:pageBlockButtons location="bottom">
+                    <apex:commandButton action="{!save}" value="save"/>
+                </apex:pageBlockButtons>
+            
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

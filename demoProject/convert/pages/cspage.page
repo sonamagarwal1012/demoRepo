@@ -1,0 +1,18 @@
+<apex:page controller="Cs">
+    <apex:form >
+        <apex:pageblock >
+            <apex:outputLabel for="searchString">Search String</apex:outputLabel>
+            <apex:inputText value="{!searchString}"/>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="search" action="{!save}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:pageblocktable value="{!results}" var="r">
+                    <apex:column value="{!r.name}"/>
+                    <apex:column value="{!r.email}"/>
+                    <apex:column value="{!r.phone}"/>
+                </apex:pageblocktable>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page controller="Demo50">
+    <apex:form >
+        <apex:pageblock title="array">
+            <apex:pageblocksection title="months">
+            <apex:selectlist size="1">
+                <apex:selectoptions value="{!MyOptions}" />
+            </apex:selectlist>
+                </apex:pageblocksection>
+            <apex:pageblocksection title="courses">
+           <apex:selectlist size="1">
+               <apex:selectoption itemvalue="Java" itemlabel="SCJP"/>
+               <apex:selectoption itemlabel="SF" itemvalue="SFDC"/>
+            </apex:selectlist>
+            </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

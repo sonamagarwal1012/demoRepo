@@ -1,0 +1,10 @@
+<template>
+    <div>Data Display Using Wire</div>
+    <!--<template for:each={accounts.data} for:item="acc">
+        <p key ={acc.id}>{acc.name}</p>
+    </template>-->
+    <lightning-datatable data={accountData} columns={columns} key-field="id"></lightning-datatable>
+</br>
+<lightning-datatable data={accountData1} columns={columns} key-field="id"></lightning-datatable>
+    
+</template>

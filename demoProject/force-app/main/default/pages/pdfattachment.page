@@ -1,0 +1,8 @@
+<apex:page standardcontroller="account" renderas="pdf">
+    <apex:form >
+        <apex:pageblock >
+            <apex:outputfield value="{!account.name}"/>
+            <apex:outputfield value="{!account.industry}"/>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

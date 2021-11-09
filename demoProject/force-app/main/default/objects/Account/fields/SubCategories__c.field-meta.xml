@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubCategories__c</fullName>
+    <externalId>false</externalId>
+    <label>SubCategories</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Industry</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Apple Farms</fullName>
+                <default>false</default>
+                <label>Apple Farms</label>
+            </value>
+            <value>
+                <fullName>Cable</fullName>
+                <default>false</default>
+                <label>Cable</label>
+            </value>
+            <value>
+                <fullName>Corn Fields</fullName>
+                <default>false</default>
+                <label>Corn Fields</label>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+                <label>Internet</label>
+            </value>
+            <value>
+                <fullName>Radio</fullName>
+                <default>false</default>
+                <label>Radio</label>
+            </value>
+            <value>
+                <fullName>Television</fullName>
+                <default>false</default>
+                <label>Television</label>
+            </value>
+            <value>
+                <fullName>Winery</fullName>
+                <default>false</default>
+                <label>Winery</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <controllingFieldValue>Biotechnology</controllingFieldValue>
+            <valueName>Apple Farms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <controllingFieldValue>Chemicals</controllingFieldValue>
+            <valueName>Cable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel</controllingFieldValue>
+            <controllingFieldValue>Chemicals</controllingFieldValue>
+            <valueName>Corn Fields</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Apparel</controllingFieldValue>
+            <valueName>Internet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Banking</controllingFieldValue>
+            <valueName>Radio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Banking</controllingFieldValue>
+            <valueName>Television</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Biotechnology</controllingFieldValue>
+            <valueName>Winery</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

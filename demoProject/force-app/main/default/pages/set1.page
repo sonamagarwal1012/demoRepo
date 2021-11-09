@@ -1,0 +1,12 @@
+<apex:page controller="setExample">
+    <apex:form >
+        <apex:pageblock title="Set Example">
+            <apex:outputlabel >{!test}</apex:outputlabel>
+                <apex:datalist value="{!sets}" var="a">
+                    {!a}
+                </apex:datalist>
+            
+        </apex:pageblock>
+    </apex:form>
+    
+</apex:page>

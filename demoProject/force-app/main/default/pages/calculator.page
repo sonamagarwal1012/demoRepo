@@ -1,0 +1,17 @@
+<apex:page controller="CalculatorController">
+ <apex:form >
+     <apex:outputlabel >Enter first number</apex:outputlabel>
+     <apex:inputtext value="{!num1}"/>
+     <br/>
+     <apex:outputlabel >Enter Second number</apex:outputlabel>
+     <apex:inputtext value="{!num2}"/>
+     <br/>
+     <apex:outputlabel id="one">Result:{!result}</apex:outputlabel>
+     <br/><br/>
+     <apex:commandbutton value="add" rerender="one" action="{!add}"/>
+      <apex:commandbutton value="Subtract" rerender="one" action="{!sub}"/>
+      <apex:commandbutton value="Multiply" rerender="one" action="{!mul}"/>
+      <apex:commandbutton value="Divide" rerender="one" action="{!div}"/>
+    </apex:form>
+   
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page standardController="Contact" sidebar="false" recordSetVar="ConRecord">
+<apex:pageBlock title="Contact Details">
+    <apex:pageblocktable value="{!ConRecord}" var="c" rows="5" columnswidth="100,100,100">
+        <apex:column value="{!c.Name}"/>
+        <apex.column value="{!c.FirstName}"/>
+        <apex:column value="{!c.LastName}"/>
+        <apex:column value="{!c.account.Name}"/>
+    </apex:pageblocktable></apex:pageBlock></apex:page>

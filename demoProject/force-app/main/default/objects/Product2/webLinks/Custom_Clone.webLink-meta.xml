@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Clone</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Custom Clone</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>window.open(&apos;/apex/customCloneVF?id={!Product2.Id}&apos;,&quot;menubar=0, toolbar=1, resizable=1, width=600, height=400&quot;);</url>
+</WebLink>

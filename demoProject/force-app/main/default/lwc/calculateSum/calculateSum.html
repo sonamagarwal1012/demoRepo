@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title={title}>
+        
+        <p class="slds-p-horizontal_small">
+            <lightning-input type='number' name='fstNumber' label='First Number' value={fNUmber} onchange={handleChange}>
+            </lightning-input>
+            <lightning-input type='number' name='scndNumber' label='Second Number' value={sNumber} onchange={handleChange}>
+            </lightning-input>
+        </p>
+        <lightning-button label="Add" slot="actions" onclick={handleSubmit}></lightning-button>
+        <p slot="footer">
+            <b>{sum}</b><br/>
+            <b>{greeting}</b>
+        </p>
+    </lightning-card> 
+</template>
